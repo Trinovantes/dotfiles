@@ -33,5 +33,6 @@ nnoremap ; :
 nnoremap <silent> <C-o> :NERDTree<Cr>
 
 " syntax highlighting
+set t_Co=256
 colorscheme jellybeans
 syntax on
