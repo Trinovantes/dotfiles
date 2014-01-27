@@ -32,6 +32,12 @@ nnoremap ; :
 " shortcut to NERDTree plugin
 nnoremap <silent> <C-o> :NERDTree<Cr>
 
+" move through visual lines when lines wrap around
+imap <silent> <Down> <C-o>gj
+imap <silent> <Up> <C-o>gk
+nmap <silent> <Down> gj
+nmap <silent> <Up> gk
+
 " syntax highlighting
 set t_Co=256
 colorscheme jellybeans
