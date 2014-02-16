@@ -2,6 +2,15 @@ export SVN_EDITOR=vim
 export GIT_EDITOR=vim
 export VISUAL=vim
 export EDITOR=vim
+    
+#------------------------------------------------------------------------------
+# PATH
+#------------------------------------------------------------------------------
+
+export PATH=~/bin/astyle/build/gcc/bin:$PATH
+export PATH=~/bin/Sublime\ Text\ 2:$PATH
+export PATH=~/bin/texmaker_linux64:$PATH
+export PATH=~/bin/eclipse:$PATH
 
 #------------------------------------------------------------------------------
 # Alias
@@ -17,12 +26,12 @@ if [[ `uname` != 'AIX' ]]; then
     alias 'ls'="ls -lhXp --color=auto --group-directories-first"
     alias 'grep'='grep --color=auto --before-context=2 --after-context=4 --recursive -n'
     alias 'ssh'='ssh -Y'
-    alias 'ak'='~/bin/ack'
+    alias 'ak'='ack-grep'
     alias 'gae-server'='~/bin/appengine/dev_appserver.py'
     alias 'gae-upload'='~/bin/appengine/appcfg.py'
-    alias 'astyle'='~/bin/astyle/build/gcc/bin/astyle'
+    alias 'intellij'='~/bin/intellij/bin/idea.sh'
 else
-	alias ls="ls -l -p"
+    alias ls="ls -l -p"
 fi
 
 #------------------------------------------------------------------------------
