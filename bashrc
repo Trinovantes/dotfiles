@@ -30,6 +30,7 @@ if [[ `uname` != 'AIX' ]]; then
     alias 'gae-server'='~/bin/appengine/dev_appserver.py'
     alias 'gae-upload'='~/bin/appengine/appcfg.py'
     alias 'intellij'='~/bin/intellij/bin/idea.sh'
+    alias 'clear-recent-files'='cat /dev/null > .local/share/recently-used.xbel'
 else
     alias ls="ls -l -p"
 fi
