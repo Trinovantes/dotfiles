@@ -1,7 +1,10 @@
-[user]
-	name = Stephen Li
-	email = stephenli.ca@gmail.com
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    st = status
+    ci = commit
+    co = checkout
 [color]
 	ui = auto
+[user]
+	name = =
+	email = stephenli.ca@gmail.com
