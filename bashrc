@@ -11,6 +11,7 @@ export PATH=~/bin/astyle/build/gcc/bin:$PATH
 export PATH=~/bin/Sublime\ Text\ 2:$PATH
 export PATH=~/bin/texmaker_linux64:$PATH
 export PATH=~/bin/eclipse:$PATH
+export PATH=~/bin/ngrok:$PATH
 
 #------------------------------------------------------------------------------
 # Alias
