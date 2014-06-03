@@ -35,6 +35,7 @@ if   [[ `uname` == 'Linux' ]]; then
     alias 'clear_recent_files'='cat /dev/null > .local/share/recently-used.xbel'
 elif [[ `uname` == 'Darwin' ]]; then # OSX
     alias 'ls'='ls -l -h -p'
+    alias find="mdfind -onlyin . -name"
 elif [[ `uname` == 'AIX' ]]; then # AIX
     alias ls='ls -l -p'
 fi
