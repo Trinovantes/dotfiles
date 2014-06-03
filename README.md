@@ -13,6 +13,8 @@ cd dotfiles/
 sh setup.sh
 ```
 
+**Important!** Don't forget to update your name and email in the `gitconfig` file.
+
 Uninstall
 ---
 ```sh
