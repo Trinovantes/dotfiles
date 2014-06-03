@@ -17,24 +17,26 @@ export PATH=~/bin/ngrok:$PATH
 # Alias
 #------------------------------------------------------------------------------
 
-alias cd..='cd ..'
-alias vim='vim -O'
+alias 'cd..'='cd ..'
+alias 'vim'='vim -O'
+alias 'ls'='ls -lhXp --color=auto --group-directories-first'
+alias 'grep'='grep --color=auto --before-context=2 --after-context=4 --recursive -n'
+alias 'ssh'='ssh -Y'
+alias 'ak'='ack-grep'
 
-if [[ `uname` != 'AIX' ]]; then
+if   [[ `uname` == 'Linux' ]]; then
     LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
     export LS_COLORS
 
-    alias 'ls'="ls -lhXp --color=auto --group-directories-first"
-    alias 'grep'='grep --color=auto --before-context=2 --after-context=4 --recursive -n'
-    alias 'ssh'='ssh -Y'
-    alias 'ak'='ack-grep'
     alias 'gae-server'='~/bin/appengine/dev_appserver.py'
     alias 'gae-upload'='~/bin/appengine/appcfg.py'
     alias 'intellij'='~/bin/intellij/bin/idea.sh'
     alias 'adt'='~/bin/adt/eclipse/eclipse'
-    alias 'clear-recent-files'='cat /dev/null > .local/share/recently-used.xbel'
-else
-    alias ls="ls -l -p"
+    alias 'clear_recent_files'='cat /dev/null > .local/share/recently-used.xbel'
+elif [[ `uname` == 'Darwin' ]]; then # OSX
+    alias 'ls'='ls -l -h -p'
+elif [[ `uname` == 'AIX' ]]; then # AIX
+    alias ls='ls -l -p'
 fi
 
 #------------------------------------------------------------------------------
