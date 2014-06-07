@@ -12,6 +12,7 @@ export PATH=~/bin/Sublime\ Text\ 2:$PATH
 export PATH=~/bin/texmaker_linux64:$PATH
 export PATH=~/bin/eclipse:$PATH
 export PATH=~/bin/ngrok:$PATH
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 #------------------------------------------------------------------------------
 # Alias
