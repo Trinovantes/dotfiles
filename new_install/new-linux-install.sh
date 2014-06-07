@@ -26,3 +26,8 @@ apt-get install -y astyle
 apt-get install -y g++
 apt-get install -y clang
 apt-get install -y valgrind
+
+# Flux
+add-apt-repository ppa:kilian/f.lux
+apt-get update
+apt-get install -y fluxgui
