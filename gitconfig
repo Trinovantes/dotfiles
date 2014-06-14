@@ -3,5 +3,10 @@
     st = status
     ci = commit
     co = checkout
+    rb = rebase
+    update = rebase origin master --no-ff
 [color]
     ui = auto
+[user]
+    name = Stephen Li
+    email = stephenli.ca@gmail.com

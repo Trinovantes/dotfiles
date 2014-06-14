@@ -16,6 +16,23 @@ apt-get install -y g++
 apt-get install -y clang
 apt-get install -y valgrind
 
+# Python dev
+apt-get install -y python-pip
+apt-get install -y python-mysqldb
+pip install django
+pip install peewee
+pip install beautifulsoup4
+pip install httpie
+
+# Node dev
+apt-get install -y npm
+npm install less
+
+# Web dev
+apt-get install -y php5-cli
+apt-get install -y mysql-server
+apt-get install -y phpmyadmin
+
 # Flux
 add-apt-repository ppa:kilian/f.lux
 apt-get update
