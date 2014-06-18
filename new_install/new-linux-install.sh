@@ -10,6 +10,7 @@ apt-get install -y yum
 apt-get install -y curl
 apt-get install -y ack-grep
 apt-get install -y astyle
+apt-get install -y latexmk
 
 # C++ dev
 apt-get install -y g++
