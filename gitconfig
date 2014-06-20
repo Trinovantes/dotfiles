@@ -4,7 +4,7 @@
     ci = commit
     co = checkout
     rb = rebase
-    update = rebase origin master --no-ff
+    update =  pull --rebase origin master 
 [color]
     ui = auto
 [user]

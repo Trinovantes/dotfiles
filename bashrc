@@ -25,6 +25,8 @@ alias 'grep'='grep --color=auto --before-context=2 --after-context=4 --recursive
 alias 'ssh'='ssh -Y'
 alias 'ak'='ack-grep'
 
+mcd () { mkdir -p "$@" && cd "$@"; }
+
 if   [[ `uname` == 'Linux' ]]; then
     LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
     export LS_COLORS
