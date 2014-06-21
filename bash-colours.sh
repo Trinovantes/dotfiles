@@ -1,5 +1,6 @@
 # Reset
 Reset="\[\033[0m\]"           # Text Reset
+Reset_BG="\[\033[49m\]"       # BG Reset
 
 # Regular Colors
 Black="\[\033[0;30m\]"        # Black

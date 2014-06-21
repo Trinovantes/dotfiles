@@ -102,6 +102,6 @@ PS1="\n"\
 "${On_Black}  "\
 "${On_Purple} ${BIYellow}${PathShort} "\
 "${On_Black}${BCyan}"'$(__git_prettify)'\
-"${Reset}${NewLine}$ "\
+"${Reset_BG}${Reset}${NewLine}$ "\
 
 bash ~/.screenfetch.sh
