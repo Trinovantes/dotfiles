@@ -345,7 +345,7 @@ __git_ps1 ()
 		local f="$w$i$s$u"
 		if [ $pcmode = yes ]; then
 			local gitstring=
-			if [ -n "${GIT_PS1_SHOWCOLORHINTS-}" ]; then
+			if [ -n "${GIT_PS1_SHOWCOLORHINTS}" ]; then
 				local c_red='\e[31m'
 				local c_green='\e[32m'
 				local c_lblue='\e[1;34m'

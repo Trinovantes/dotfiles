@@ -8,8 +8,8 @@ Install
 
 ```sh
 cd ~/
-git clone https://github.com/Trinovantes/dotfiles
-cd dotfiles/
+git clone https://github.com/Trinovantes/dotfiles ~/.dotfiles
+cd ~/.dotfiles/
 bash setup.sh link
 ```
 

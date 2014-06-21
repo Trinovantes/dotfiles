@@ -1,7 +1,17 @@
 #!/bin/bash
 
 dir="dotfiles"
-files="vim bash_profile bashrc gdbinit inputrc vimrc git-completion.bash gitconfig git-prompt.sh"
+files=\
+" bash_profile"\
+" bashrc"\
+" bash-colours.sh"\
+" gdbinit"\
+" inputrc"\
+" vim"\
+" vimrc"\
+" gitconfig"\
+" git-prompt.sh"\
+" screenfetch.sh"
 
 for file in $files; do
     if   [[ "$1" == "unlink" ]]; then
