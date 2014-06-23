@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir="dotfiles"
+dir=".dotfiles"
 files=\
 " bash_profile"\
 " bashrc"\

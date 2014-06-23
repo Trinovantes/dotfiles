@@ -11,7 +11,7 @@ export EDITOR=vim
 # PATH
 #------------------------------------------------------------------------------
 
-export PATH="~/bin/android/eclipse"
+export PATH="~/bin/android/eclipse:$PATH"
 export PATH="~/bin/texlive_linux32:$PATH"
 export PATH="/usr/local/texlive/2014/bin/x86_64-linux:$PATH"    # Texlive
 export PATH="$PATH:$HOME/.rvm/bin"                              # Add RVM to PATH for scripting
@@ -58,7 +58,7 @@ if   [[ `uname` == 'Linux' ]]; then
     alias ls='ls --color -l -p -h -X --group-directories-first'
     alias find='find . -name'
 elif [[ `uname` == 'Darwin' ]]; then # OSX
-    alias ls='ls --color -l -p -h'
+    alias ls='ls -l -p -h'
     alias find='mdfind -onlyin . -name'
 elif [[ `uname` == 'AIX' ]]; then # AIX
     alias ls='ls -l -p'
