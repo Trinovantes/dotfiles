@@ -11,6 +11,8 @@ export EDITOR=vim
 # PATH
 #------------------------------------------------------------------------------
 
+export PATH="~/bin/android/eclipse"
+export PATH="~/bin/texlive_linux32:$PATH"
 export PATH="/usr/local/texlive/2014/bin/x86_64-linux:$PATH"    # Texlive
 export PATH="$PATH:$HOME/.rvm/bin"                              # Add RVM to PATH for scripting
 
@@ -97,7 +99,7 @@ GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 
 PS1="\n"\
-"${On_Black}  $Time12a "\
+"${On_Black}  $Time12a  "\
 "${On_Blue} ${BCyan}\u${BBlue}@${BCyan}${HOST} "\
 "${On_Black}  "\
 "${On_Purple} ${BIYellow}${PathShort} "\
