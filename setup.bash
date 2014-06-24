@@ -11,6 +11,7 @@ files=\
 " vimrc"\
 " gitconfig"\
 " git-prompt.sh"\
+" git-completion.bash"\
 " screenfetch.sh"
 
 for file in $files; do

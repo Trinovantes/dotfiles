@@ -72,6 +72,7 @@ fi
 #  http://mediadoneright.com/content/ultimate-git-ps1-bash-prompt
 #------------------------------------------------------------------------------
 
+source ~/.git-completion.bash
 source ~/.git-prompt.sh
 source ~/.bash-colours.sh
 
@@ -99,10 +100,10 @@ GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 
 PS1="\n"\
-"${On_Black}  $Time12a  "\
+"${On_Black}${BYellow}  $Time12a  "\
 "${On_Blue} ${BCyan}\u${BBlue}@${BCyan}${HOST} "\
 "${On_Black}  "\
-"${On_Purple} ${BIYellow}${PathShort} "\
+"${On_Green} ${BBlack}${PathShort} "\
 "${On_Black}${BCyan}"'$(__git_prettify)'\
 "${Reset_BG}${Reset}${NewLine}$ "\
 
