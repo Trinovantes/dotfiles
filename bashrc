@@ -11,8 +11,7 @@ export EDITOR=vim
 # PATH
 #------------------------------------------------------------------------------
 
-export PATH="~/bin/android/eclipse:$PATH"
-export PATH="~/bin/texlive_linux32:$PATH"
+export PATH="~/bin/android/ndk:$PATH"
 export PATH="/usr/local/texlive/2014/bin/x86_64-linux:$PATH"    # Texlive
 export PATH="$PATH:$HOME/.rvm/bin"                              # Add RVM to PATH for scripting
 
@@ -32,8 +31,10 @@ alias 'path'='echo -e ${PATH//:/\\n}'
 if [[ `uname` == 'Linux' ]]; then
     alias 'gae-server'='~/bin/appengine/dev_appserver.py'
     alias 'gae-upload'='~/bin/appengine/appcfg.py'
-    alias 'adt'='~/bin/adt/eclipse/eclipse'
     alias 'clear_recent_files'='cat /dev/null > .local/share/recently-used.xbel'
+    alias 'android'='~/bin/android/eclipse/eclipse'
+    alias 'op'='xdg-open'
+    alias 'texmaker'='~/bin/texmaker_linux32/texmaker'
 fi
 
 #------------------------------------------------------------------------------
