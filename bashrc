@@ -35,6 +35,7 @@ if [[ `uname` == 'Linux' ]]; then
     alias 'android'='~/bin/android/eclipse/eclipse'
     alias 'op'='xdg-open'
     alias 'texmaker'='~/bin/texmaker_linux32/texmaker'
+    alias 'fix'='git diff --name-only | uniq | xargs $EDITOR'
 fi
 
 #------------------------------------------------------------------------------
