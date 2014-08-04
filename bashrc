@@ -27,7 +27,7 @@ mcd () { mkdir -p "$@" && cd "$@"; }
 
 alias 'diskspace'='du -S | sort -n -r | more'
 alias 'path'='echo -e ${PATH//:/\\n}'
-alias 'fix'='git diff --name-only | uniq | xargs $EDITOR'
+alias 'fix'='$EDITOR $( git diff --name-only --diff-filter=U | xargs )'
 
 if [[ `uname` == 'Linux' ]]; then
     alias 'gae-server'='~/bin/appengine/dev_appserver.py'
