@@ -27,6 +27,7 @@ mcd () { mkdir -p "$@" && cd "$@"; }
 
 alias 'diskspace'='du -S | sort -n -r | more'
 alias 'path'='echo -e ${PATH//:/\\n}'
+alias 'fix'='git diff --name-only | uniq | xargs $EDITOR'
 
 if [[ `uname` == 'Linux' ]]; then
     alias 'gae-server'='~/bin/appengine/dev_appserver.py'
@@ -35,7 +36,6 @@ if [[ `uname` == 'Linux' ]]; then
     alias 'android'='~/bin/android/eclipse/eclipse'
     alias 'op'='xdg-open'
     alias 'texmaker'='~/bin/texmaker_linux32/texmaker'
-    alias 'fix'='git diff --name-only | uniq | xargs $EDITOR'
 fi
 
 #------------------------------------------------------------------------------
@@ -43,20 +43,20 @@ fi
 #------------------------------------------------------------------------------
 
 alias 'cd..'='cd ..'
-alias vi='vim'
-alias vim='vim -O'
-alias ssh='ssh -Y'
-alias ak='ack-grep'
+alias 'vi'='vim'
+alias 'vim'='vim -O'
+alias 'ssh'='ssh -Y'
+alias 'ak'='ack-grep'
 
-# Enable colored grep if color is supported
+# Enable coloured grep if colour is supported
 ( echo chk | grep --color=auto chk &> /dev/null ) && export GREP_OPTIONS="--color=auto"
 alias grep='grep -n'
 
-# Enable colored ls if color is supported
+# Enable coloured ls if colour is supported
 ( ls --color &> /dev/null ) && export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:'
 
 # Platform specific changes
-if   [[ `uname` == 'Linux' ]]; then
+if   [[ `uname` == 'Linux' ]]; then # e.g. Linux Mint
     alias ls='ls --color -l -p -h -X --group-directories-first'
     alias find='find . -name'
 elif [[ `uname` == 'Darwin' ]]; then # OSX
