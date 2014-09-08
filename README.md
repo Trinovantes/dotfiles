@@ -10,7 +10,7 @@ Install
 cd ~/
 git clone https://github.com/Trinovantes/dotfiles ~/.dotfiles
 cd ~/.dotfiles/
-bash setup.sh link
+bash setup.bash link
 ```
 
 **Important!** Don't forget to update your name and email in the `gitconfig` file.
@@ -18,5 +18,5 @@ bash setup.sh link
 Uninstall
 ---
 ```sh
-bash setup.sh unlink
+bash setup.bash unlink
 ```
