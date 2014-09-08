@@ -30,8 +30,8 @@ alias 'path'='echo -e ${PATH//:/\\n}'
 alias 'fix'='$EDITOR $( git diff --name-only --diff-filter=U | xargs )'
 
 if [[ `uname` == 'Linux' ]]; then
-    alias 'gae-server'='~/bin/appengine/dev_appserver.py'
-    alias 'gae-upload'='~/bin/appengine/appcfg.py'
+    alias 'gae-server'='~/bin/google_appengine/dev_appserver.py'
+    alias 'gae-upload'='~/bin/google_appengine/appcfg.py'
     alias 'clear_recent_files'='cat /dev/null > .local/share/recently-used.xbel'
     alias 'android'='~/bin/android/eclipse/eclipse'
     alias 'op'='xdg-open'
