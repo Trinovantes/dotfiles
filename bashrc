@@ -29,6 +29,8 @@ alias 'diskspace'='du -S | sort -n -r | more'
 alias 'path'='echo -e ${PATH//:/\\n}'
 alias 'fix'='$EDITOR $( git diff --name-only --diff-filter=U | xargs )'
 
+alias 'cs343-astyle'='astyle --style=java --indent=spaces --unpad-paren --pad-header --pad-oper --align-pointer=type --convert-tabs --suffix=none'
+
 if [[ `uname` == 'Linux' ]]; then
     alias 'gae-server'='~/bin/google_appengine/dev_appserver.py'
     alias 'gae-upload'='~/bin/google_appengine/appcfg.py'
