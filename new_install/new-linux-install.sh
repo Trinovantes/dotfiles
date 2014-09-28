@@ -4,6 +4,7 @@ apt-get update -y
 
 # General dev
 apt-get install -y git
+apt-get install -y subversion
 apt-get install -y xclip
 apt-get install -y xzdec
 apt-get install -y yum
@@ -11,6 +12,8 @@ apt-get install -y curl
 apt-get install -y ack-grep
 apt-get install -y astyle
 apt-get install -y latexmk
+apt-get install -y imagemagick
+apt-get install -y ghostscript
 
 # C++ dev
 apt-get install -y g++
