@@ -28,6 +28,7 @@ mcd () { mkdir -p "$@" && cd "$@"; }
 alias 'diskspace'='du -S | sort -n -r | more'
 alias 'path'='echo -e ${PATH//:/\\n}'
 alias 'fix'='$EDITOR $( git diff --name-only --diff-filter=U | xargs )'
+alias 'chmod-value'='stat --format "%a"'
 
 alias 'cs343-astyle'='astyle --style=java --indent=spaces --unpad-paren --pad-header --pad-oper --align-pointer=type --convert-tabs --suffix=none'
 
