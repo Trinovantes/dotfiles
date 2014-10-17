@@ -14,6 +14,7 @@ apt-get install -y astyle
 apt-get install -y latexmk
 apt-get install -y imagemagick
 apt-get install -y ghostscript
+apt-get install -y httrack
 
 # C++ dev
 apt-get install -y g++
