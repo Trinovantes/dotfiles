@@ -50,6 +50,7 @@ alias 'vi'='vim'
 alias 'vim'='vim -O'
 alias 'ssh'='ssh -Y'
 alias 'ak'='ack-grep'
+alias 'time'='/usr/bin/time'
 
 # Enable coloured grep if colour is supported
 ( echo chk | grep --color=auto chk &> /dev/null ) && export GREP_OPTIONS="--color=auto"
