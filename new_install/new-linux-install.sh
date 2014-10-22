@@ -32,6 +32,7 @@ pip install httpie
 # Node dev
 apt-get install -y npm
 npm install less
+npm install coffee-script
 
 # Flux
 add-apt-repository ppa:kilian/f.lux
