@@ -2,6 +2,7 @@
 
 dir=".dotfiles"
 files=\
+" private.sh"\
 " bash_profile"\
 " bashrc"\
 " bash-colours.sh"\
