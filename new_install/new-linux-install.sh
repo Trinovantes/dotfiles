@@ -15,6 +15,7 @@ apt-get install -y latexmk
 apt-get install -y imagemagick
 apt-get install -y ghostscript
 apt-get install -y httrack
+apt-get install -y p7zip-full
 
 # C++ dev
 apt-get install -y g++
