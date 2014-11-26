@@ -84,39 +84,42 @@ fi
 #  http://mediadoneright.com/content/ultimate-git-ps1-bash-prompt
 #------------------------------------------------------------------------------
 
-source ~/.git-completion.bash
-source ~/.git-prompt.sh
-source ~/.bash-colours.sh
+if echo "$-" | grep i > /dev/null; then
 
-# Various variables you might want for your PS1 prompt instead
-User="\u"
-Time12h="\T"
-Time12a="\@"
-PathShort="\w"
-PathFull="\W"
-NewLine="\n"
-Jobs="\j"
-HOST=$(hostname)
+    source ~/.git-completion.bash
+    source ~/.git-prompt.sh
+    source ~/.bash-colours.sh
 
-__git_prettify()
-{
-    git branch &> /dev/null
+    # Various variables you might want for your PS1 prompt instead
+    User="\u"
+    Time12h="\T"
+    Time12a="\@"
+    PathShort="\w"
+    PathFull="\W"
+    NewLine="\n"
+    Jobs="\j"
+    HOST=$(hostname)
 
-    if [ $? -eq 0 ]; then
-        echo '  '$(__git_ps1 "(%s)")
-    fi
-}
+    __git_prettify()
+    {
+        git branch &> /dev/null
 
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWSTASHSTATE=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
+        if [ $? -eq 0 ]; then
+            echo '  '$(__git_ps1 "(%s)")
+        fi
+    }
 
-PS1="\n"\
-"${On_Black}${BYellow}  $Time12a  "\
-"${On_Blue} ${BCyan}\u${BBlue}@${BCyan}${HOST} "\
-"${On_Black}  "\
-"${On_Green} ${BBlack}${PathShort} "\
-"${On_Black}${BCyan}"'$(__git_prettify)'\
-"${Reset_BG}${Reset}${NewLine}$ "\
+    GIT_PS1_SHOWDIRTYSTATE=1
+    GIT_PS1_SHOWSTASHSTATE=1
+    GIT_PS1_SHOWUNTRACKEDFILES=1
 
-bash ~/.screenfetch.sh
+    PS1="\n"\
+    "${On_Black}${BYellow}  $Time12a  "\
+    "${On_Blue} ${BCyan}\u${BBlue}@${BCyan}${HOST} "\
+    "${On_Black}  "\
+    "${On_Green} ${BBlack}${PathShort} "\
+    "${On_Black}${BCyan}"'$(__git_prettify)'\
+    "${Reset_BG}${Reset}${NewLine}$ "\
+
+    bash ~/.screenfetch.sh
+fi
