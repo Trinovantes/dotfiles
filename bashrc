@@ -84,11 +84,11 @@ fi
 #  http://mediadoneright.com/content/ultimate-git-ps1-bash-prompt
 #------------------------------------------------------------------------------
 
-if echo "$-" | grep i > /dev/null; then
+source ~/.git-completion.bash
+source ~/.git-prompt.sh
+source ~/.bash-colours.sh
 
-    source ~/.git-completion.bash
-    source ~/.git-prompt.sh
-    source ~/.bash-colours.sh
+if echo "$-" | grep i > /dev/null; then
 
     # Various variables you might want for your PS1 prompt instead
     User="\u"
@@ -113,13 +113,13 @@ if echo "$-" | grep i > /dev/null; then
     GIT_PS1_SHOWSTASHSTATE=1
     GIT_PS1_SHOWUNTRACKEDFILES=1
 
-    PS1="\n"\
-    "${On_Black}${BYellow}  $Time12a  "\
-    "${On_Blue} ${BCyan}\u${BBlue}@${BCyan}${HOST} "\
-    "${On_Black}  "\
-    "${On_Green} ${BBlack}${PathShort} "\
-    "${On_Black}${BCyan}"'$(__git_prettify)'\
-    "${Reset_BG}${Reset}${NewLine}$ "\
+PS1="\n"\
+"${On_Black}${BYellow}  $Time12a  "\
+"${On_Blue} ${BCyan}\u${BBlue}@${BCyan}${HOST} "\
+"${On_Black}  "\
+"${On_Green} ${BBlack}${PathShort} "\
+"${On_Black}${BCyan}"'$(__git_prettify)'\
+"${Reset_BG}${Reset}${NewLine}$ "\
 
     bash ~/.screenfetch.sh
 fi
