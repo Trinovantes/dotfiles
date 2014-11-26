@@ -121,5 +121,4 @@ PS1="\n"\
 "${On_Black}${BCyan}"'$(__git_prettify)'\
 "${Reset_BG}${Reset}${NewLine}$ "\
 
-    bash ~/.screenfetch.sh
 fi
