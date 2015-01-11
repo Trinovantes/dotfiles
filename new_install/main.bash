@@ -29,6 +29,7 @@ pip install django
 pip install peewee
 pip install beautifulsoup4
 pip install httpie
+pip install tortilla
 
 # Node dev
 apt-get install -y npm
@@ -39,3 +40,4 @@ npm install coffee-script
 add-apt-repository ppa:kilian/f.lux
 apt-get update
 apt-get install -y fluxgui
+

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt-get install -y ruby
 \curl -sSL https://get.rvm.io | bash -s stable
 
@@ -6,3 +8,4 @@ source /home/stephen/.rvm/scripts/rvm
 
 gem install rails
 gem install jekyll
+
