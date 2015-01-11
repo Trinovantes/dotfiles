@@ -17,7 +17,8 @@ export EDITOR=vim
 # PATH
 #------------------------------------------------------------------------------
 
-export PATH="~/bin/android/ndk:$PATH"
+export PATH="~/bin/android/ndk:$PATH"                           # Android NDK
+export PATH="~/bin/google_appengine:$PATH"                      # Google App Engine
 export PATH="/usr/local/texlive/2014/bin/x86_64-linux:$PATH"    # Texlive
 export PATH="$PATH:$HOME/.rvm/bin"                              # Add RVM to PATH for scripting
 
@@ -35,8 +36,6 @@ alias 'diskspace'='du -S | sort -n -r | more'
 alias 'path'='echo -e ${PATH//:/\\n}'
 alias 'fix'='$EDITOR $( git diff --name-only --diff-filter=U | xargs )'
 alias 'chmod-value'='stat --format "%a"'
-
-alias 'cs343-astyle'='astyle --style=java --indent=spaces --unpad-paren --pad-header --pad-oper --align-pointer=type --convert-tabs --suffix=none'
 
 if [[ `uname` == 'Linux' ]]; then
     alias 'gae-server'='~/bin/google_appengine/dev_appserver.py'
