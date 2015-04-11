@@ -45,6 +45,7 @@ if [[ `uname` == 'Linux' ]]; then
     alias 'op'='xdg-open'
     alias 'texmaker'='~/bin/texmaker_linux32/texmaker'
     alias 'init-makefile'='echo '"'"'print-%: ; @echo $*=$($*)'"'"' >> Makefile'
+    alias 'clean-python'='find "*.pyc" | xargs rm'
 fi
 
 #------------------------------------------------------------------------------
