@@ -40,7 +40,7 @@ alias 'chmod-value'='stat --format "%a"'
 if [[ `uname` == 'Linux' ]]; then
     alias 'gae-server'='dev_appserver.py --log_level debug .'
     alias 'gae-upload'='appcfg.py --oauth2 update .'
-    alias 'clear_recent_files'='cat /dev/null > .local/share/recently-used.xbel'
+    alias 'clear-recent-files'='cat /dev/null > .local/share/recently-used.xbel'
     alias 'android'='~/bin/android/eclipse/eclipse'
     alias 'op'='xdg-open'
     alias 'texmaker'='~/bin/texmaker_linux32/texmaker'
