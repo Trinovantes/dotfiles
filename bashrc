@@ -46,6 +46,7 @@ if [[ `uname` == 'Linux' ]]; then
     alias 'texmaker'='~/bin/texmaker_linux32/texmaker'
     alias 'init-makefile'='echo '"'"'print-%: ; @echo $*=$($*)'"'"' >> Makefile'
     alias 'clean-python'='find "*.pyc" | xargs rm'
+    alias 'astyle-java'='astyle --style=java --indent=spaces=4 --indent-cases --pad-oper --unpad-paren --pad-header'
 fi
 
 #------------------------------------------------------------------------------
