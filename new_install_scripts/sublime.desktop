@@ -7,7 +7,7 @@ GenericName=Text Editor
  
 Exec=sublime
 Terminal=false
-Icon=/home/stephen/bin/Sublime Text 2/Icon/48x48/sublime_text.png
+Icon=/home/stephen/bin/sublime2/Icon/48x48/sublime_text.png
 Type=Application
 Categories=TextEditor;IDE;Development
 X-Ayatana-Desktop-Shortcuts=NewWindow
