@@ -11,6 +11,7 @@
 [user]
     name = Stephen Li
     email = stephenli.ca@gmail.com
+    signingkey = 15F735AA
 [push]
     default = simple
 

@@ -26,6 +26,9 @@ export PATH="$PATH:$HOME/.rvm/bin"                              # Add RVM to PAT
 # Custom commands
 #------------------------------------------------------------------------------
 
+# Ensure gpg-agent knows which tty to prompt on
+export GPG_TTY=$(tty)
+
 # mkdir and cd into new directory
 mcd () { mkdir -p "$@" && cd "$@"; }
 
