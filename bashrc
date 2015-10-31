@@ -39,6 +39,7 @@ alias 'diskspace'='du -S | sort -n -r | more'
 alias 'path'='echo -e ${PATH//:/\\n}'
 alias 'fix'='$EDITOR $( git diff --name-only --diff-filter=U | xargs )'
 alias 'chmod-value'='stat --format "%a"'
+alias 'list-users'='cut -d: -f1 /etc/passwd'
 
 if [[ `uname` == 'Linux' ]]; then
     alias 'gae-server'='dev_appserver.py --log_level debug .'
