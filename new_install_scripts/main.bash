@@ -1,5 +1,7 @@
 #!/bin/bash
 
+add-apt-repository -y ppa:kilian/f.lux # Flux
+
 apt-get update -y
 
 # General dev
@@ -16,6 +18,8 @@ apt-get install -y imagemagick
 apt-get install -y ghostscript
 apt-get install -y httrack
 apt-get install -y p7zip-full
+apt-get install -y gnupg2
+apt-get install -y fluxgui
 
 # C++ dev
 apt-get install -y g++
@@ -33,11 +37,9 @@ pip install tortilla
 
 # Node dev
 apt-get install -y npm
-npm install less
-npm install coffee-script
-
-# Flux
-add-apt-repository ppa:kilian/f.lux
-apt-get update
-apt-get install -y fluxgui
+npm install -g less
+npm install -g gulp
+npm install -g jshint
+npm install -g browserify
+npm install -g mocha
 
