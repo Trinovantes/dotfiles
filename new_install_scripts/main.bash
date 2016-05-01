@@ -36,6 +36,8 @@ pip install httpie
 pip install tortilla
 
 # Node dev
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+apt-get install -y nodejs
 apt-get install -y npm
 npm install -g less
 npm install -g gulp
