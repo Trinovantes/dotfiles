@@ -8,7 +8,8 @@ export VISUAL=vim
 export EDITOR=vim
 
 export PADS_HOME="/home/stephen/bin/pads"
-. $PADS_HOME/scripts/Q_DO_SETEV.sh > /dev/null 2> /dev/null
+export SML="/home/stephen/bin/sml/bin/sml"
+. $PADS_HOME/scripts/Q_DO_SETEV.sh &>> /dev/null
 
 #------------------------------------------------------------------------------
 # PATH
