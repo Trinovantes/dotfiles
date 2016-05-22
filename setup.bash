@@ -10,6 +10,7 @@ files=\
 " inputrc"\
 " vim"\
 " vimrc"\
+" profile"\
 " gitconfig"\
 " git-prompt.sh"\
 " git-completion.bash"\
@@ -31,3 +32,4 @@ git submodule update
 git submodule foreach git pull origin master
 git submodule foreach git submodule init
 git submodule foreach git submodule update
+

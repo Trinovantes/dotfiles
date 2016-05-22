@@ -3,24 +3,7 @@
 #------------------------------------------------------------------------------
 
 source ~/.private.sh
-
-#------------------------------------------------------------------------------
-# Editors
-#------------------------------------------------------------------------------
-
-export SVN_EDITOR=vim
-export GIT_EDITOR=vim
-export VISUAL=vim
-export EDITOR=vim
-
-#------------------------------------------------------------------------------
-# PATH
-#------------------------------------------------------------------------------
-
-export PATH="~/bin/android/ndk:$PATH"                           # Android NDK
-export PATH="~/bin/google_appengine:$PATH"                      # Google App Engine
-export PATH="/usr/local/texlive/2014/bin/x86_64-linux:$PATH"    # Texlive
-export PATH="$PATH:$HOME/.rvm/bin"                              # Add RVM to PATH for scripting
+source ~/.profile
 
 #------------------------------------------------------------------------------
 # Custom commands
