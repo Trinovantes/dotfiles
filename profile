@@ -18,6 +18,6 @@ export SML="/home/stephen/bin/sml/bin/sml"
 export PATH="/home/stephen/bin/android/ndk:$PATH"               # Android NDK
 export PATH="/home/stephen/bin/appengine:$PATH"                 # Google App Engine
 export PATH="/home/stephen/bin/sml/bin:$PATH"                   # SML
+export PATH="/home/stephen/.rvm/bin:$PATH"                      # Add RVM to PATH for scripting
 export PATH="/usr/local/texlive/2014/bin/x86_64-linux:$PATH"    # Texlive
-export PATH="$PATH:$HOME/.rvm/bin"                              # Add RVM to PATH for scripting
 
