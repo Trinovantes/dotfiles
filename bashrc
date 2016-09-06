@@ -45,8 +45,7 @@ alias 'ak'='ack-grep'
 alias 'time'='/usr/bin/time -p'
 
 # Enable coloured grep if colour is supported
-( echo chk | grep --color=auto chk &> /dev/null ) && export GREP_OPTIONS="--color=auto"
-alias grep='grep -n'
+( echo chk | grep --color=auto chk &> /dev/null ) && alias grep="grep -n --color=auto" || alias grep='grep -n'
 
 # Enable coloured ls if colour is supported
 ( ls --color &> /dev/null ) && export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:'
