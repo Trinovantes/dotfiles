@@ -5,6 +5,7 @@ add-apt-repository -y ppa:kilian/f.lux # Flux
 apt-get update -y
 
 # General dev
+apt-get install -y vim
 apt-get install -y git
 apt-get install -y subversion
 apt-get install -y xclip
