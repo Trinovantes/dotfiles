@@ -28,7 +28,7 @@ if [[ `uname` == 'Linux' ]]; then
     alias 'gae-upload'='appcfg.py --oauth2 update .'
     alias 'clear-recent-files'='cat /dev/null > .local/share/recently-used.xbel'
     alias 'op'='xdg-open'
-    alias 'init-makefile'='echo '"'"'print-%: ; @echo $*=$($*)'"'"' >> Makefile'
+    alias 'makefile-init'='echo '"'"'print-%: ; @echo $*=$($*)'"'"' >> Makefile'
     alias 'clean-python'='find "*.pyc" | xargs rm'
     alias 'astyle-java'='astyle --style=java --indent=spaces=4 --indent-cases --pad-oper --unpad-paren --pad-header'
 fi
@@ -43,9 +43,7 @@ alias 'vim'='vim -O'
 alias 'ssh'='ssh -Y'
 alias 'ak'='ack-grep'
 alias 'time'='/usr/bin/time -p'
-
-# Enable coloured grep if colour is supported
-( echo chk | grep --color=auto chk &> /dev/null ) && alias grep="grep -n --color=auto" || alias grep='grep -n'
+alias 'grep'='grep -n --color=auto'
 
 # Enable coloured ls if colour is supported
 ( ls --color &> /dev/null ) && export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:'
