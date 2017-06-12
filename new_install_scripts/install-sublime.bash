@@ -6,8 +6,8 @@ tar xf Sublime\ Text\ 2.0.2\ x64.tar.bz2
 
 # Setup Sublime
 mkdir -p ~/bin
-mv Sublime\ Text\ 2 ~/bin/sublime2
-sudo ln -s ~/bin/sublime2/sublime_text /usr/bin/sublime
+mv Sublime\ Text\ 2 /opt/sublime2
+sudo ln -s /opt/sublime2/sublime_text /usr/bin/sublime
 sudo cp sublime.desktop /usr/share/applications/
 
 # Clean up
