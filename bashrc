@@ -51,7 +51,7 @@ alias 'grep'='grep -n --color=auto'
 # Platform specific changes
 if   [[ `uname` == 'Linux' ]]; then # e.g. Linux Mint
     # Case sensitive sort
-    alias ls='LC_COLLATE=en_US ls --color -l -p -h -X --group-directories-first'
+    alias ls='LC_COLLATE=en_US ls --color -l -p -h --group-directories-first'
     alias find='find . -name'
 elif [[ `uname` == 'Darwin' ]]; then # OSX
     alias ls='ls -l -p -h'
