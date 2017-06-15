@@ -14,8 +14,8 @@ export GPG_TTY=$(tty)
 # mkdir and cd into new directory
 mcd () { mkdir -p "$@" && cd "$@"; }
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+# Set terminal title
+PROMPT_COMMAND='echo -en "\033]0; $(whoami)@$(hostname) $(pwd) \a"'
 
 alias 'diskspace'='du -S | sort -n -r | more'
 alias 'path'='echo -e ${PATH//:/\\n}'
