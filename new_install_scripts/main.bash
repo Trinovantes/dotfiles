@@ -1,7 +1,5 @@
 #!/bin/bash
 
-add-apt-repository -y ppa:kilian/f.lux # Flux
-
 apt-get update -y
 
 # General dev
@@ -20,7 +18,6 @@ apt-get install -y ghostscript
 apt-get install -y httrack
 apt-get install -y p7zip-full
 apt-get install -y gnupg2
-apt-get install -y fluxgui
 
 # C++ dev
 apt-get install -y g++
