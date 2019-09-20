@@ -24,8 +24,6 @@ alias 'chmod-value'='stat --format "%a"'
 alias 'list-users'='cut -d: -f1 /etc/passwd'
 
 if [[ `uname` == 'Linux' ]]; then
-    alias 'gae-server'='dev_appserver.py --log_level debug .'
-    alias 'gae-upload'='appcfg.py --oauth2 update .'
     alias 'clear-recent-files'='cat /dev/null > .local/share/recently-used.xbel'
     alias 'op'='xdg-open'
     alias 'makefile-init'='echo '"'"'print-%: ; @echo $*=$($*)'"'"' >> Makefile'
@@ -107,4 +105,3 @@ PS1="\n"\
 
     bash ~/.screenfetch.sh
 fi
-
