@@ -41,7 +41,7 @@ alias 'cd..'='cd ..'
 alias 'vi'='vim'
 alias 'vim'='vim -O'
 alias 'ssh'='ssh -Y'
-alias 'ak'='ack-grep'
+alias 'ak'='ack'
 alias 'time'='/usr/bin/time -p'
 alias 'grep'='grep -n --color=auto'
 

@@ -11,6 +11,12 @@ export EDITOR=vim
 # PATH
 #------------------------------------------------------------------------------
 
+# Android NDK
+export PATH="/opt/android/ndk:$PATH"
+
+# CUDA/OpenCL
+export PATH="/usr/local/cuda-10.0/bin:$PATH"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/google-cloud-sdk/path.bash.inc' ]; then . '/opt/google-cloud-sdk/path.bash.inc'; fi
 
