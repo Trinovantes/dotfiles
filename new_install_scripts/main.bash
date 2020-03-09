@@ -38,6 +38,7 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 apt-get install -y nodejs
 apt-get install -y npm
 npm install -g less
+npm install -g npx
 npm install -g gulp
 npm install -g jshint
 npm install -g browserify

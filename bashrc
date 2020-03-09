@@ -31,6 +31,7 @@ if [[ `uname` == 'Linux' ]]; then
     alias 'astyle-java'='astyle --style=java --indent=spaces=4 --indent-cases --pad-oper --unpad-paren --pad-header'
     alias 'fg-record'='perf record -g -F 1000 --'
     alias 'fg-svg'='perf script | /opt/flamegraph/stackcollapse-perf.pl | c++filt | /opt/flamegraph/flamegraph.pl > perf.svg'
+    alias 'npmx=PATH=$(npm bin):$PATH'
 fi
 
 #------------------------------------------------------------------------------
@@ -52,10 +53,8 @@ alias 'grep'='grep -n --color=auto'
 if   [[ `uname` == 'Linux' ]]; then # e.g. Linux Mint
     # Case sensitive sort
     alias ls='LC_COLLATE=en_US ls --color -l -p -h --group-directories-first'
-    alias find='find . -name'
 elif [[ `uname` == 'Darwin' ]]; then # OSX
     alias ls='ls -l -p -h'
-    alias find='mdfind -onlyin . -name'
 elif [[ `uname` == 'AIX' ]]; then # AIX
     alias ls='ls -l -p'
 fi
