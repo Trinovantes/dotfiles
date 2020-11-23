@@ -81,7 +81,7 @@ PS1="\n"\
 "${On_Black}${BYellow}  $Time12a  "\
 "${On_Blue} ${BCyan}\u${BBlue}@${BCyan}${HOST} "\
 "${On_Black}  "\
-"${On_Green} ${BBlack}${PathShort} "\
+"${On_Green} ${BWhite}${PathShort} "\
 "${On_Black}${BCyan}"'$(__git_prettify)'\
 "${Reset_BG}${Reset}${NewLine}$ "\
 
