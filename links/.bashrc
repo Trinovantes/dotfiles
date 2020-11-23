@@ -1,10 +1,4 @@
 #------------------------------------------------------------------------------
-# Private API keys and other passwords
-#------------------------------------------------------------------------------
-
-source ~/.private.sh
-
-#------------------------------------------------------------------------------
 # Custom commands
 #------------------------------------------------------------------------------
 
@@ -17,21 +11,15 @@ mcd () { mkdir -p "$@" && cd "$@"; }
 # Set terminal title
 PROMPT_COMMAND='echo -en "\033]0; $(whoami)@$(hostname) $(pwd) \a"'
 
-alias 'diskspace'='du -S | sort -n -r | more'
+alias 'diskspace'='du -h --separate-dirs | sort --human-numeric-sort --reverse | more'
 alias 'path'='echo -e ${PATH//:/\\n}'
-alias 'fix'='$EDITOR $( git diff --name-only --diff-filter=U | xargs )'
 alias 'chmod-value'='stat --format "%a"'
-alias 'list-users'='cut -d: -f1 /etc/passwd'
+alias 'list-users'='cut --delimiter=":" --fields=1 /etc/passwd'
 
 if [[ `uname` == 'Linux' ]]; then
-    alias 'clear-recent-files'='cat /dev/null > .local/share/recently-used.xbel'
-    alias 'op'='xdg-open'
     alias 'makefile-init'='echo '"'"'print-%: ; @echo $*=$($*)'"'"' >> Makefile'
-    alias 'clean-python'='find "*.pyc" | xargs rm'
-    alias 'astyle-java'='astyle --style=java --indent=spaces=4 --indent-cases --pad-oper --unpad-paren --pad-header'
     alias 'fg-record'='perf record -g -F 1000 --'
     alias 'fg-svg'='perf script | /opt/flamegraph/stackcollapse-perf.pl | c++filt | /opt/flamegraph/flamegraph.pl > perf.svg'
-    alias 'npmx=PATH=$(npm bin):$PATH'
 fi
 
 #------------------------------------------------------------------------------
@@ -39,24 +27,17 @@ fi
 #------------------------------------------------------------------------------
 
 alias 'cd..'='cd ..'
-alias 'vi'='vim'
-alias 'vim'='vim -O'
-alias 'ssh'='ssh -Y'
-alias 'ak'='ack'
-alias 'time'='/usr/bin/time -p'
-alias 'grep'='grep -n --color=auto'
+alias 'grep'='grep --line-number --color=auto'
 
 # Enable coloured ls if colour is supported
 ( ls --color &> /dev/null ) && export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:'
 
 # Platform specific changes
-if   [[ `uname` == 'Linux' ]]; then # e.g. Linux Mint
+if   [[ `uname` == 'Linux' ]]; then # Ubuntu
     # Case sensitive sort
-    alias ls='LC_COLLATE=en_US ls --color -l -p -h --group-directories-first'
+    alias ls='LC_COLLATE=en_US ls -l -p -h --color --group-directories-first'
 elif [[ `uname` == 'Darwin' ]]; then # OSX
-    alias ls='ls -l -p -h'
-elif [[ `uname` == 'AIX' ]]; then # AIX
-    alias ls='ls -l -p'
+    alias ls='                 ls -l -p -h'
 fi
 
 #------------------------------------------------------------------------------
@@ -67,9 +48,9 @@ fi
 #  http://mediadoneright.com/content/ultimate-git-ps1-bash-prompt
 #------------------------------------------------------------------------------
 
-source ~/.git-completion.bash
+source ~/.bash-colors.sh
+source ~/.git-completion.sh
 source ~/.git-prompt.sh
-source ~/.bash-colours.sh
 
 if echo "$-" | grep i > /dev/null; then
 

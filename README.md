@@ -1,22 +1,16 @@
 dotfiles
 ===
 
-Collection of the dotfiles that I use in my daily workflow
+Linux config files that I use in my daily workflow
 
 Install
 ---
 
 ```sh
-cd ~/
 git clone https://github.com/Trinovantes/dotfiles ~/.dotfiles
 cd ~/.dotfiles/
-bash setup.bash link
-```
+bash setup.bash
 
-**Important!** Don't forget to update your name and email in the `gitconfig` file.
-
-Uninstall
----
-```sh
-bash setup.bash unlink
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 ```

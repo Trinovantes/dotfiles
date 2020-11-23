@@ -1,35 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-dir=".dotfiles"
-files=\
-" private.sh"\
-" bash_profile"\
-" bashrc"\
-" bash-colours.sh"\
-" gdbinit"\
-" inputrc"\
-" vim"\
-" vimrc"\
-" profile"\
-" gitconfig"\
-" git-prompt.sh"\
-" git-completion.bash"\
-" screenfetch.sh"
+LINKS_DIR='./links'
+FILES=$(find $LINKS_DIR -type f)
 
-for file in $files; do
-    if   [[ "$1" == "unlink" ]]; then
-        echo Unlinking ~/.$file
-        unlink ~/.$file
-    elif [[ "$1" == "link" ]]; then
-        echo Linking ~/.$file
-        ln -sf $dir/$file ~/.$file
-    fi
+for filename in $FILES; do
+    echo Linking $(realpath $filename)
+    ln -sf $(realpath $filename) ~
 done
-
-git submodule sync
-git submodule init
-git submodule update
-git submodule foreach git pull origin master
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-
