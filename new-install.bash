@@ -25,6 +25,7 @@ gem install jekyll
 apt-get install -y nodejs
 apt-get install -y npm
 npm install -g pm2
+npm install -g nodemon
 
 # Node Dev - yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
