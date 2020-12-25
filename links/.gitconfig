@@ -13,3 +13,5 @@
     email = stephenli.ca@gmail.com
 [push]
     default = simple
+[core]
+    editor = vim
