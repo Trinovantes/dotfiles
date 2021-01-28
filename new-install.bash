@@ -13,8 +13,8 @@ apt-get install -y clang
 apt-get install -y valgrind
 
 # Python Dev
-apt-get install -y python-pip
-pip install httpie
+apt-get install -y python3-pip
+pip3 install httpie
 
 # Ruby Dev
 apt-get install -y ruby-full build-essential zlib1g-dev
