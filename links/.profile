@@ -11,6 +11,10 @@ export EDITOR=vim
 # PATH
 #------------------------------------------------------------------------------
 
+if [ -d "$(yarn global bin)" ]; then
+    export PATH="$(yarn global bin):$PATH"
+fi
+
 # Rust Cargo
 if [ -d "/home/stephen/.cargo/bin" ]; then
     export PATH="/home/stephen/.cargo/bin:$PATH"
