@@ -12,8 +12,8 @@ export EDITOR=vim
 #------------------------------------------------------------------------------
 
 # Rust Cargo
-if [ -f '/home/stephen/.cargo/bin' ]; then
-    export PATH="$PATH:/home/stephen/.cargo/bin"
+if [ -d "/home/stephen/.cargo/bin" ]; then
+    export PATH="/home/stephen/.cargo/bin:$PATH"
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
