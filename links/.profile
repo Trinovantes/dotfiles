@@ -11,6 +11,11 @@ export EDITOR=vim
 # PATH
 #------------------------------------------------------------------------------
 
+export DENO_INSTALL="/home/stephen/.deno"
+if [ -d $DENO_INSTALL ]; then
+    export PATH="$DENO_INSTALL/bin:$PATH"
+fi
+
 if [ -d "$(yarn global bin)" ]; then
     export PATH="$(yarn global bin):$PATH"
 fi
