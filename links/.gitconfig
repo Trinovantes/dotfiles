@@ -15,5 +15,5 @@
     default = simple
 [core]
     editor = vim
-    autocrlf = true
+    autocrlf = input
 
