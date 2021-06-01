@@ -16,6 +16,7 @@ alias 'path'='echo -e ${PATH//:/\\n}'
 alias 'chmod-value'='stat --format "%a"'
 alias 'list-users'='cut --delimiter=":" --fields=1 /etc/passwd'
 alias 'clear-mail'='cp /dev/null /var/mail/root'
+alias 'updeps'='yarn upgrade && git add yarn.lock && git commit -m "Upgrade dependencies"'
 
 if [[ `uname` == 'Linux' ]]; then
     alias 'makefile-init'='echo '"'"'print-%: ; @echo $*=$($*)'"'"' >> Makefile'
