@@ -16,11 +16,6 @@ apt-get install -y valgrind
 apt-get install -y python3-pip
 pip3 install httpie
 
-# Ruby Dev
-apt-get install -y ruby-full build-essential zlib1g-dev
-gem install bundler
-gem install jekyll
-
 # Node Dev
 curl -sL https://deb.nodesource.com/setup_lts.x | bash -
 apt-get install -y nodejs
