@@ -21,3 +21,4 @@ curl -sL https://deb.nodesource.com/setup_lts.x | bash -
 apt-get install -y nodejs
 npm install -g nodemon
 npm install -g yarn
+npm install -g n
