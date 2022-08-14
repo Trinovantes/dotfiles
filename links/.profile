@@ -15,7 +15,7 @@ if [ -d "/home/stephen/.local/bin" ]; then
     export PATH="/home/stephen/.local/bin:$PATH"
 fi
 
-if [ -d "$(yarn global bin)" ]; then
+if [ -x "$(command -v yarn)" ] && [ -d "$(yarn global bin)" ]; then
     export PATH="$(yarn global bin):$PATH"
 fi
 
@@ -27,7 +27,7 @@ if [ -d "/home/stephen/.cargo/bin" ]; then
     export PATH="/home/stephen/.cargo/bin:$PATH"
 fi
 
-if [ -d "$(go env GOPATH)" ]; then
+if [ -x "$(command -v go)" ] && [ -d "$(go env GOPATH)" ]; then
     export PATH="$(go env GOPATH)/bin:$PATH"
 fi
 
