@@ -40,6 +40,8 @@ if   [[ `uname` == 'Linux' ]]; then # Ubuntu
     alias ls='LC_COLLATE=en_US ls -l -p -h --color --group-directories-first'
 elif [[ `uname` == 'Darwin' ]]; then # OSX
     alias ls='                 ls -l -p -h'
+else
+    alias ls='LC_COLLATE=en_US ls -l -p -h --color --group-directories-first'
 fi
 
 #------------------------------------------------------------------------------
