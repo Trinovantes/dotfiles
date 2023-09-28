@@ -55,37 +55,39 @@ source ~/.git-completion.sh
 source ~/.git-prompt.sh
 
 if echo "$-" | grep i > /dev/null; then
+    # Flags
+    GIT_PS1_SHOWDIRTYSTATE=1
+    GIT_PS1_SHOWSTASHSTATE=1
+    GIT_PS1_SHOWUNTRACKEDFILES=1
 
     # Various variables you might want for your PS1 prompt instead
     User="\u"
+    Host=$(hostname)
     Time12h="\T"
     Time12a="\@"
     PathShort="\w"
     PathFull="\W"
     NewLine="\n"
     Jobs="\j"
-    HOST=$(hostname)
 
     __git_prettify()
     {
         git branch &> /dev/null
 
         if [ $? -eq 0 ]; then
-            echo '  '$(__git_ps1 "(%s)")
+            echo $(__git_ps1 "(%s)")
         fi
     }
 
-    GIT_PS1_SHOWDIRTYSTATE=1
-    GIT_PS1_SHOWSTASHSTATE=1
-    GIT_PS1_SHOWUNTRACKEDFILES=1
-
 PS1="\n"\
-"${On_Black}${BYellow}  $Time12a  "\
-"${On_Blue} ${BCyan}\u${BBlue}@${BCyan}${HOST} "\
+"${On_Black}  "\
+"${BYellow}${Time12a}"\
+"${On_Black}  "\
+"${On_Blue} ${BCyan}${User}${BBlue}@${BCyan}${Host} "\
 "${On_Black}  "\
 "${On_Green} ${BWhite}${PathShort} "\
-"${On_Black}${BCyan}"'$(__git_prettify)'\
-"${Reset_BG}${Reset}${NewLine}$ "\
+"${On_Black}${BCyan}"$'  $(__git_prettify)  '\
+"${Reset_BG}${Reset}"$'\n$ '
 
     bash ~/.screenfetch.sh
 fi
