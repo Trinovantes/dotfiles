@@ -27,8 +27,8 @@ if [ -d "/home/stephen/.cargo/bin" ]; then
     export PATH="/home/stephen/.cargo/bin:$PATH"
 fi
 
-if [ -x "$(command -v go)" ] && [ -d "$(go env GOPATH)" ]; then
-    export PATH="$(go env GOPATH)/bin:$PATH"
+if [ -d "/usr/local/go" ]; then
+    export PATH="/usr/local/go/bin:$PATH"
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
