@@ -92,5 +92,7 @@ PS1="\n"\
 "${On_Black}${BCyan}"$'  $(__git_prettify)  '\
 "${Reset_BG}${Reset}"$'\n$ '
 
-    bash ~/.screenfetch.sh
+    if [[ "$(uname -s)" != "MINGW"* && "$(uname -s )" != "CYGWIN"* ]]; then
+        bash ~/.screenfetch.sh
+    fi
 fi
