@@ -11,26 +11,27 @@ mcd () { mkdir -p "$@" && cd "$@"; }
 # Set terminal title
 PROMPT_COMMAND='echo -en "\033]0; $(whoami)@$(hostname) $(pwd) \a"'
 
-alias 'diskspace'='du -h --separate-dirs | sort --human-numeric-sort --reverse | more'
 alias 'path'='echo -e ${PATH//:/\\n}'
+alias 'diskspace'='du -h --separate-dirs | sort --human-numeric-sort --reverse | more'
+alias 'clear-mail'='cp /dev/null /var/mail/root'
 alias 'chmod-value'='stat --format "%a"'
 alias 'list-users'='cut --delimiter=":" --fields=1 /etc/passwd'
-alias 'clear-mail'='cp /dev/null /var/mail/root'
-alias 'updeps'='yarn upgrade && git add yarn.lock && git commit -m "Upgrade dependencies"'
-alias 'pn'='pnpm'
+alias 'cd..'='cd ..'
+alias 'grep'='grep --line-number --color=auto'
 
-if [[ `uname` == 'Linux' ]]; then
-    alias 'makefile-init'='echo '"'"'print-%: ; @echo $*=$($*)'"'"' >> Makefile'
-    alias 'fg-record'='perf record -g -F 1000 --'
-    alias 'fg-svg'='perf script | /opt/flamegraph/stackcollapse-perf.pl | c++filt | /opt/flamegraph/flamegraph.pl > perf.svg'
+alias 'makefile-init'='echo '"'"'print-%: ; @echo $*=$($*)'"'"' >> Makefile'
+alias 'fg-record'='perf record -g -F 1000 --'
+alias 'fg-svg'='perf script | /opt/flamegraph/stackcollapse-perf.pl | c++filt | /opt/flamegraph/flamegraph.pl > perf.svg'
+alias 'pn'='pnpm'
+alias 'serve'='python3 -m http.server 8080'
+
+if [[ $(uname -r) =~ WSL ]]; then
+    alias 'yt'='yt-dlp --path /mnt/c/Users/Stephen/Downloads/'
 fi
 
 #------------------------------------------------------------------------------
-# Override System commands
+# Customize LS
 #------------------------------------------------------------------------------
-
-alias 'cd..'='cd ..'
-alias 'grep'='grep --line-number --color=auto'
 
 # Enable coloured ls if colour is supported
 ( ls --color &> /dev/null ) && export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:'
