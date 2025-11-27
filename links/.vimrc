@@ -79,3 +79,6 @@ nmap <silent> <Up> gk
 set t_Co=256
 colorscheme jellybeans
 syntax on
+
+" ocaml
+set rtp^="$HOME/.opam/default/share/ocp-indent/vim"
