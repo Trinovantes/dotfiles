@@ -24,6 +24,10 @@ if [ -d "$HOME/.bun" ]; then
     export PATH="$HOME/.bun/bin:$PATH"
 fi
 
+if [ -d "$HOME/.opam" ]; then
+    . $HOME/.opam/opam-init/init.sh
+fi
+
 if [ -d "/usr/local/go" ]; then
     export PATH="/usr/local/go/bin:$PATH"
 fi
