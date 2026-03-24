@@ -23,6 +23,7 @@ alias 'makefile-init'='echo '"'"'print-%: ; @echo $*=$($*)'"'"' >> Makefile'
 alias 'fg-record'='perf record -g -F 1000 --'
 alias 'fg-svg'='perf script | /opt/flamegraph/stackcollapse-perf.pl | c++filt | /opt/flamegraph/flamegraph.pl > perf.svg'
 alias 'pn'='pnpm'
+alias 'pnup'="pnpm upgrade --latest '!@types/node' '!@types/express' '!express'"
 alias 'serve'='python3 -m http.server 8080'
 
 if [[ $(uname -r) =~ WSL ]]; then
