@@ -18,6 +18,7 @@ alias 'chmod-value'='stat --format "%a"'
 alias 'list-users'='cut --delimiter=":" --fields=1 /etc/passwd'
 alias 'cd..'='cd ..'
 alias 'grep'='grep --line-number --color=auto'
+alias 'rm'='rm --verbose'
 
 alias 'makefile-init'='echo '"'"'print-%: ; @echo $*=$($*)'"'"' >> Makefile'
 alias 'fg-record'='perf record -g -F 1000 --'
